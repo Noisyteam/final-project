@@ -69,7 +69,7 @@ function contact() {
     row.appendChild(column);
 
     var card = document.createElement("div");
-    card.className = "card";
+    // card.className = "card";
     column.appendChild(card);
 
     var img = document.createElement("img");
@@ -97,7 +97,7 @@ function contact() {
     // var p3 = document.createElement("p");
     // p3.textContent = "socialmedia";
     // container.appendChild(p3);
-var iconArr = ["fa fa-facebook-square", "fa fa-linkedin-square","fa fa-github-square" ];
+var iconArr = ["fa fa-facebook-square", "fa fa-linkedin","fa fa-github-square" ];
    
 for (var x = 0; x < team[j].socialMedia.length ; x++){
 
