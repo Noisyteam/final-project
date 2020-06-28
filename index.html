@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Bus Mall Store</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <h1>Welcome Noisy team</h1>
+
+  <header>
+    <h1>Bus Mall Store</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart</a><span id="itemCount"></span></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="silder col-1" id="silderContent">
+      <img src="" alt="">
+      <h1></h1>
+      <h2></h2>
+    </section>
+
+
+    <section id="productSection" class="gallery js-flickity">
+      <h2>New Products</h2>
+
+    </section>
+
+    <section id="featurerProductSection" class="gallery js-flickity">
+      <h2>Feature Products</h2>
+
+    </section>
+
+    <div class="carrousel" id="userReview">
+      <h2>Users Reviews</h2>
+      <input type="radio" name="slides" id="radio-1" checked>
+      <input type="radio" name="slides" id="radio-2">
+      <input type="radio" name="slides" id="radio-3">
+      <input type="radio" name="slides" id="radio-4">
+      <ul class="slides" id="userReviewSlides">
+      </ul>
+      <div class="slidesNavigation">
+        <label for="radio-1" id="dotForRadio-1"></label>
+        <label for="radio-2" id="dotForRadio-2"></label>
+        <label for="radio-3" id="dotForRadio-3"></label>
+        <label for="radio-4" id="dotForRadio-4"></label>
+      </div>
+    </div>
+    <!-- <section class="deck col-1">
+        <div class="card">
+          <header>
+            <h1>Shop Our Catalog</h1>
+          </header>
+          <div class="copy">
+            <ol>
+              <li>Select an item from our catalog and indicate how many you would like to purchase.</li>
+              <li>Once you've made your selection, click the "Add to Cart" button</li>
+              <li>When you are ready to purchase, click the "Cart" link above to view your cart and check out</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck col-2">
+        <div class="card">
+          <div class="copy">
+            <form id="catalog">
+              <fieldset>
+                <legend>Catalog</legend>
+                <label>
+                  <span>Item</span>
+                  <select id="items"></select>
+                </label>
+                <label>
+                  <span>Quantity</span>
+                  <input id="quantity" type="number" />
+                </label>
+                <input type="submit" value="Add To Cart" />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="card" id="cartContents"></div>
+      </section> -->
+
+  </main>
+
+  <footer>
+    <p>&copy;2018 Code Fellows 201d33</p>
+  </footer>
+
+  <script src='js/app.js'></script>
+  <script src='js/catalog.js'></script>
 </body>
+
 </html>

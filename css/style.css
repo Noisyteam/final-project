@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #e7eaf6;
+  font-family: 'MuseoModerno', cursive;
+
+}
+
+body>header {
+  background: #113f67;
+  overflow: hidden;
+  padding: .5em 5em;
+}
+
+body>header nav {
+  float: right;
+  line-height: 2.5em;
+}
+
+body>header nav li {
+  display: inline-block;
+}
+
+body>header nav li a {
+  color: #fff;
+  padding: 0 .5em;
+  text-decoration: none;
+}
+
+.silder {
+  height: 450px;
+}
+
+#itemCount:empty {
+  display: none;
+}
+
+#itemCount {
+  color: #fff;
+  font-size: .75em;
+  margin-left: -.5em;
+  position: relative;
+  top: -1em;
+  background-color: #a6dcef;
+  padding: 0.4em;
+  border-radius: 100%;
+  font-size: 11px;
+  color: #000;
+  font-weight: 700;
+}
+
+body>header h1 {
+  float: left;
+  font-size: 2.5em;
+  color: #fff;
+}
+
+main {
+  background: #fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  line-height: 1.5em;
+  margin: 1.5em 1.5em 2.5em;
+  min-height: calc(100% - 9.5em);
+  height: auto !important;
+  text-shadow: white -1px 1px;
+}
+
+footer {
+  background: #113f67;
+  border-top: 1px solid #ccc;
+  color: #fff;
+  display: block;
+  height: 1.5em;
+  padding: .5em 5em;
+  text-align: center;
+}
+
+.deck {
+  overflow:hidden;
+}
+
+.card {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.deck.col-2 .card {
+  float: left;
+  width: 45%;
+}
+
+.card header {
+  background: #438a5e;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  color: #fff;
+  padding: .5em;
+  text-align: center;
+  text-shadow: none;
+}
+
+.card .copy {
+  padding: 1.5em;
+}
+
+.copy ol li {
+  line-height: 2.3em;
+  border-bottom: .01em solid #4f8a8b;
+
+}
+
+legend {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.5em;
+  background-color: #bac964;
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+  line-height: 3em;
+}
+
+form {
+  margin: auto;
+  width: 50%;
+}
+
+input[type=number],
+select {
+  height: 1.75em;
+  width: 100%;
+}
+
+input[type=submit] {
+  float: right;
+}
+
+label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+label span {
+  display: block;
+  padding-bottom: .25em;
+}
+
+.card#cartContents {
+  background: #f7fbe1;
+  padding: 1.5em;
+}
+
+.gallery {
+  margin-bottom: 50px;
+}
+.gallery h2 {
+  line-height: 50px;
+  font-size: 26px;
+  padding-left: 20px;
+  color: #38598b;
+}
+
+.card#cartContents ul li {
+  line-height: 2.5em;
+  border-bottom: 0.01em solid #d6efc7;
+}
+
+#cart {
+  border-collapse: collapse;
+  margin: auto;
+  width: 75%;
+}
+
+#cart thead {
+  background-color: #e7dfd5;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+
+}
+#cart thead tr th {
+  color: #000;
+  border-bottom: 3px solid #062f4f;
+  font-weight: 700;
+  padding: .5em 1em;
+}
+
+
+#cart tr td {
+  border-bottom: 1px solid #062f4f;
+  border-collapse: none;
+  color: #204051;
+  padding: .5em 1em;
+  text-align: center;
+  width: auto;
+}
+
+#cart tr td:last-child,
+#cart tr th:last-child {
+  text-align: left;
+  width: 100%;
+}
+
+#cart tr td:first-child {
+  color: #900c3f;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+#productSection {
+  clear: both;
+  width: 100%;
+  margin: auto;
+}
+
+.card {
+  max-width: calc(100% / 5);
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  display: inline-block;
+  padding: 0px 10px;
+  margin-top: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #a2a8d3;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 1em;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+
+.carrousel {
+  background: #ffffff;
+  text-align: center;
+  padding: 4em 0;
+  height: 9.5em;
+  max-width: 750px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.carrousel h2 {
+  margin: 0;
+  margin-top: -1.7em;
+  padding: 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: #bbbbbb;
+  margin-bottom: 1em;
+}
+.carrousel .slides {
+  width: 400%;
+  left: 0;
+  padding-left: 0;
+  padding-top: 1em;
+  overflow: hidden;
+  list-style: none;
+  position: relative;
+ 
+  -webkit-transition: transform .5s;
+  -moz-transition: transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+}
+.carrousel .slides li {
+  width: 25%;
+  position: relative;
+  float: left;
+}
+.carrousel .slides li .slide {
+  width: 100%;
+}
+.carrousel li p{
+  margin-top: 0;  
+}
+.carrousel li q {
+  max-width: 90%;
+  margin: auto;
+  color: #666666;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.carrousel li img {
+  width: 3em;
+  height: 3em;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+.carrousel li span.author {
+  margin-top:0.5em;
+  font-size: 1.2em;
+  color: #777777;
+  display: block;
+}
+
+.carrousel .slidesNavigation {
+  display: block;
+  list-style: none;
+  text-align: center;
+  bottom: 1em;
+  /*--- Centering trick---*/
+    /* Absolute positioning*/
+    position: absolute; 
+    /* Abosulte positioning*/
+    width: 104px; /*This width  is the addition of the width of all the navigations dots - So in this case is   104 because the navigation dots are 26px (width:10px and 6px marginleft + 6 px marginright) and there are 4 dots so 4x26=104 */
+    left: 50%; /*Centering de element*/
+    margin-left: -52px; /*adjusting the centering by applying a negative margin of half of the width*/
+}
+.carrousel input {
+  display: none;
+}
+.carrousel .slidesNavigation label {
+  float: left;
+  margin: 6px;
+  display: block;
+  height: 10px;
+  width: 10px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: solid 2px #2980b9;
+  font-size: 0;
+}
+/* You have to repeat this with each slide
+TODO: make it easier with SCSS
+25% movement 100/slides-num
+*/
+#radio-1:checked ~ .slides {
+  transform: translateX(0%);
+}
+#radio-2:checked ~ .slides {
+  transform: translateX(-25%);
+}
+#radio-3:checked ~ .slides {
+  transform: translateX(-50%);
+}
+#radio-4:checked ~ .slides {
+  transform: translateX(-75%);
+}
+ 
+ 
+.carrousel .slidesNavigation label:hover {
+   cursor: pointer;
+}
+/* You have to repeat this with each slide/dot */
+.carrousel #radio-1:checked ~ .slidesNavigation label#dotForRadio-1,
+.carrousel #radio-2:checked ~ .slidesNavigation label#dotForRadio-2,
+.carrousel #radio-3:checked ~ .slidesNavigation label#dotForRadio-3,
+.carrousel #radio-4:checked ~ .slidesNavigation label#dotForRadio-4 {
+  background: #2980b9;
+}
+ 
