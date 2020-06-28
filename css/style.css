@@ -82,22 +82,22 @@ footer {
   text-align: center;
 }
 
-.deck {
+/* .deck {
   overflow:hidden;
-}
+} */
 
-.card {
+/* .card {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
-.deck.col-2 .card {
+/* .section-1 .card {
   float: left;
   width: 45%;
-}
+} */
 
-.card header {
+/* .card header {
   background: #438a5e;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -105,7 +105,7 @@ footer {
   padding: .5em;
   text-align: center;
   text-shadow: none;
-}
+} */
 
 .card .copy {
   padding: 1.5em;
@@ -171,24 +171,38 @@ label span {
   line-height: 2.5em;
   border-bottom: 0.01em solid #d6efc7;
 }
-
+.secation-2
+{
+margin-top: 25px;
+padding: 10px;
+}
 #cart {
   border-collapse: collapse;
   margin: auto;
-  width: 75%;
+  width: 90%;
+  height: 100px; 
+ 
 }
 
 #cart thead {
+  
   background-color: #e7dfd5;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
+  
+  
+  
 
 }
 #cart thead tr th {
   color: #000;
   border-bottom: 3px solid #062f4f;
   font-weight: 700;
-  padding: .5em 1em;
+  padding: 1em 1em 1em 1em;
+  width: 300px;
+  text-align: center;
+  
+  
 }
 
 
@@ -196,9 +210,11 @@ label span {
   border-bottom: 1px solid #062f4f;
   border-collapse: none;
   color: #204051;
-  padding: .5em 1em;
+  padding: 1em 1em 1em 1em;
   text-align: center;
-  width: auto;
+  vertical-align: middle;
+  width: calc(100%/5);
+  /* width: auto; */
 }
 
 #cart tr td:last-child,
@@ -211,6 +227,21 @@ label span {
   color: #900c3f;
   cursor: pointer;
   font-size: 1.5em;
+  margin-top: 50px;
+}
+
+#cart tbody tr td img{
+  width: 200px;
+  height: 200px;
+}
+#cart tbody tr td button{
+  color: white;
+  background-color: rgb(235, 85, 59);
+  width: 100px;
+  height: 40px;
+  border: none;
+  margin: auto;
+  display: block;
 }
 
 #productSection {

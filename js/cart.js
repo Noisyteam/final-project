@@ -51,11 +51,22 @@ function showCart() {
 
   for (var i in cart.items) {
     var tr = document.createElement('tr');
+     var imgTD=document.createElement('td');
+    var img =document.createElement('img');
+    img.setAttribute('src',cart.items[i].img);
+    imgTD.appendChild(img);
 
     var xTD = document.createElement('td');
-    xTD.textContent = 'x';
+    xTD.innerHTML = '<Button type="button" id="remove">Remove</Button>';
     xTD.classList.add('remover');
     xTD.id = i;
+
+    var pTD = document.createElement('td');
+    pTD.textContent ="$"+ cart.items[i].price;
+
+    var tTD = document.createElement('td');
+    tTD.textContent = "$"+cart.items[i].price*cart.items[i].quantity;
+
 
     var qTD = document.createElement('td');
     qTD.textContent = cart.items[i].quantity;
@@ -64,9 +75,13 @@ function showCart() {
     nTD.textContent = cart.items[i].product;
 
     tableBody.appendChild(tr);
-    tr.appendChild(xTD);
-    tr.appendChild(qTD);
+    tr.appendChild(imgTD);
     tr.appendChild(nTD);
+    tr.appendChild(pTD);
+    tr.appendChild(qTD);
+    tr.appendChild(xTD);
+    tr.appendChild(tTD);
+   
   }
 }
 
