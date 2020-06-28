@@ -42,7 +42,7 @@ function populateForm() {
       div.setAttribute('id', 'newProduct' + Product.allProducts[i].id);
 
       div.innerHTML = '<img src="'+Product.allProducts[i].filePath+'" alt="Denim Jeans" style="width:100%">' +
-        '<h1>'+Product.allProducts[i].name+'</h1>' +
+        '<h2>'+Product.allProducts[i].name+'</h2>' +
         '<p class="price">$'+Product.allProducts[i].price+'</p>' +
         '<button onClick="handleSubmit(this);">Add to Cart</button>';
         productSection.appendChild(div);
@@ -61,7 +61,7 @@ function populateForm() {
       div.setAttribute('class', 'card');
       div.setAttribute('id', 'featureProduct' + Product.allProducts[i].id);
       div.innerHTML = '<img src="'+Product.allProducts[i].filePath+'" alt="Denim Jeans" style="width:100%">' +
-        '<h1>'+Product.allProducts[i].name+'</h1>' +
+        '<h2>'+Product.allProducts[i].name+'</h2>' +
         '<p class="price">$'+Product.allProducts[i].price+'</p>' +
         '<button onClick="handleSubmit(this);">Add to Cart</button>';
         featurerProductSection.appendChild(div);
@@ -106,8 +106,8 @@ function addSelectedItemToCart(event) {
   // TODO: using those, add one item to the Cart
   var parentDiv = event.parentNode;
   var id = parentDiv.getAttribute("id");
-  
-  var item = document.querySelector('#' + id + ' h1').innerHTML;
+
+  var item = document.querySelector('#' + id + ' h2').innerHTML;
   var price = document.querySelector('#' + id + ' .price').innerHTML;
   var img = document.querySelector('#' + id + ' img').src;
 
