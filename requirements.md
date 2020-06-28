@@ -3,7 +3,7 @@
 ## Noisy Team
 
 ### Wireframe
-![Wireframe design](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/fileexport/Export_D6f8f08bfbe735d27992ff35e2d282c28.pdf)
+[Wireframe design](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/fileexport/Export_D6f8f08bfbe735d27992ff35e2d282c28.pdf)
 
 ### User Stories
 1. As a user I want to see trending product at home page.
