@@ -57,9 +57,13 @@ function showCart() {
     imgTD.appendChild(img);
 
     var xTD = document.createElement('td');
-    xTD.textContent= 'X';
-    xTD.classList.add('remover');
-    xTD.id = i;
+    var button = document.createElement('button');
+    button.innerText = 'Remove';
+    // xTD.innerHTML = '<Button type="button" id="remove">Remove</Button>';
+    button.classList.add('remover');
+    button.id = i;
+    xTD.appendChild(button);
+
 
     var pTD = document.createElement('td');
     pTD.textContent ="$"+ cart.items[i].price;
