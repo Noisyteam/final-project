@@ -13,28 +13,67 @@ body {
 }
 
 header {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)),
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/cheese-curds.jpg);
-  background-size: cover;
-  height: 80vh;
+  z-index: 100001;
+  position: sticky;
 }
 
-.title {
+body>header .header-nav nav li a {
+  color: #abbdcd!important;
+
+}
+
+header h2 {
+  color: #abbdcd;
+  line-height: 4.5em;
+  float: left;
+
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.w3schools.com/howto/photographer.jpg");
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: -200px;
+  margin-bottom: -180px;
+}
+
+.hero-text {
+  text-align: center;
   position: absolute;
-  top: 40%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  text-align: center;
 }
 
-h1 {
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.hero-text h1 {
   text-transform: uppercase;
   margin: 0;
   font-size: 3rem;
   white-space: nowrap;
+  margin-bottom: 15px;
+}
+.hero-text p {
+  margin-bottom: 15px;
 }
 
 
@@ -86,7 +125,7 @@ main {
   text-shadow: white -1px 1px;
 }
 
-footer {
+/* footer {
   background: #113f67;
   border-top: 1px solid #ccc;
   color: #fff;
@@ -94,7 +133,7 @@ footer {
   height: 1.5em;
   padding: .5em 5em;
   text-align: center;
-}
+} */
 
 /* .deck {
   overflow:hidden;
@@ -173,6 +212,10 @@ label span {
 
 .gallery {
   margin-bottom: 50px;
+}
+
+.gallery a{
+  text-decoration: none;
 }
 
 .gallery h2 {
@@ -260,20 +303,30 @@ padding: 10px;
   display: block;
 }
 
-#productSection {
+#productSection, #featurerProductSection {
   clear: both;
-  width: 100%;
+  width: 98%;
   margin: auto;
 }
 
+#featurerProductSection {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
 .card {
-  max-width: calc(100% / 5);
+  max-width: calc(97% / 5);
   margin: auto;
   text-align: center;
   font-family: arial;
   display: inline-block;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
   margin-top: 20px;
+  margin-right: 10px;
+}
+
+.card:last-child {
+  margin-right: 0px;
 }
 
 .card img {
@@ -508,7 +561,7 @@ TODO: make it easier with SCSS
 }
 
 .subscribe h2 {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .subscribe form {
@@ -551,4 +604,146 @@ TODO: make it easier with SCSS
   cursor: pointer;
   background-color: #7349af;
   border-color: #7349af;
+}
+
+
+footer{
+  background: #232323 ;
+  /* position: relative;
+  bottom:0; */
+  width: 100% 
+}
+
+.footer {
+  padding: 30px 0;
+  background-color: #09121B;
+}
+.footer_copyright {
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.footer-first-row{
+  color:#fff;
+  border-bottom: 1px solid #2f3032;
+  text-align: left;
+  padding: 18px 20px;
+}
+.footer-first-row div:first-child{
+  text-align: left 
+}
+.footer-first-row ul li{
+  /* display: inline-block; */
+  float: right;
+  margin: 0 10px;
+  font-size: 0.7em;
+}
+
+.footer-first-row ul li:first-child{
+  /* display: inline-block; */
+  float: right;
+  margin: 0 0px;
+}
+
+.footer-first-row a{
+  text-decoration: none;
+  color: #fff;
+}
+.footer-second-row{
+  color:#fff;
+  text-align: left 
+}
+.footer-second-row div:first-child{
+  text-align: left 
+}
+.footer-second-row ul li{
+  display: inline-block;
+  margin: 0 5px;
+}
+footer .footer-logo img{
+  width: 50px 
+}
+.footer-second-row ul li svg{
+  color: #595959;
+  width: 20px;
+}
+
+
+.footer-first-row ul li:last-child{
+  margin-left:0!important;
+}
+.footer-second-row ul li:first-child{
+  margin-right:0!important;
+}
+.footer-second-row{
+  text-align: center
+}
+.footer_social {
+  padding-top: 0px;
+  margin: 0 auto;
+}
+.footer_social h4 {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+}
+.footer_social span {
+  background: #fff none repeat scroll 100% 0;
+  display: block;
+ /* height: 2px;
+  */
+  margin: 20px auto 25px;
+  width: 75px;
+}
+.social_icon ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.social_icon ul li {
+  display: inline 
+}
+.social_icon ul li a i {
+  border-radius: 0px;
+  color: #fff;
+  font-size: 20px;
+  height: 45px;
+  margin: 2px;
+  padding: 13px;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+  width: 45px;
+}
+.social_icon ul li a i:hover {
+  background: #fff;
+  color: #333;
+}
+.facebook {
+  background: #345289 
+}
+.twitter {
+  background: #006E99 
+}
+.dribbble {
+  background: #FF4C83 
+}
+.instagram {
+  background: #8B5C42 
+}
+.google {
+  background: #D14031 
+}
+.youtube {
+  background: #CF1711 
+}
+.col-md-6{
+  display: inline-block;
+  width: calc(99% / 2);
+}
+.footer-second-row {
+  text-align: right;
+  padding: 18px 20px;
 }
