@@ -57,7 +57,7 @@ function showCart() {
     imgTD.appendChild(img);
 
     var xTD = document.createElement('td');
-    xTD.innerHTML = '<Button type="button" id="remove">Remove</Button>';
+    xTD.textContent= 'X';
     xTD.classList.add('remover');
     xTD.id = i;
 
@@ -89,6 +89,7 @@ function removeItemFromCart(event) {
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   // TODO: Save the cart back to local storage
   // TODO: Re-draw the cart table
+  console.log(event.target.classList);
   if (event.target.classList.contains('remover')) {
     cart.removeItem(parseInt(event.target.id));
     cart.saveToLocalStorage();
