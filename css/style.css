@@ -12,22 +12,48 @@ body {
 
 }
 
-body>header {
-  background: #113f67;
+header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/cheese-curds.jpg);
+  background-size: cover;
+  height: 80vh;
+}
+
+.title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+
+body>header .header-nav {
+  /* background: rgba(117,137,166, 0.5); */
   overflow: hidden;
   padding: .5em 5em;
 }
 
-body>header nav {
+body>header .header-nav nav {
   float: right;
-  line-height: 2.5em;
+  line-height: 4.5em;
 }
 
-body>header nav li {
+body>header .header-nav nav li {
   display: inline-block;
 }
 
-body>header nav li a {
+body>header .header-nav nav li a {
   color: #fff;
   padding: 0 .5em;
   text-decoration: none;
@@ -41,24 +67,12 @@ body>header nav li a {
   display: none;
 }
 
-#itemCount {
-  color: #fff;
-  font-size: .75em;
-  margin-left: -.5em;
-  position: relative;
-  top: -1em;
-  background-color: #a6dcef;
-  padding: 0.4em;
-  border-radius: 100%;
-  font-size: 11px;
-  color: #000;
-  font-weight: 700;
-}
 
-body>header h1 {
+body>header .header-nav h1 {
   float: left;
   font-size: 2.5em;
   color: #fff;
+  line-height: 2em;
 }
 
 main {
@@ -83,7 +97,7 @@ footer {
 }
 
 .deck {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .card {
@@ -160,6 +174,7 @@ label span {
 .gallery {
   margin-bottom: 50px;
 }
+
 .gallery h2 {
   line-height: 50px;
   font-size: 26px;
@@ -184,6 +199,7 @@ label span {
   border-top-right-radius: 1em;
 
 }
+
 #cart thead tr th {
   color: #000;
   border-bottom: 3px solid #062f4f;
@@ -268,6 +284,7 @@ label span {
   position: relative;
   overflow: hidden;
 }
+
 .carrousel h2 {
   margin: 0;
   margin-top: -1.7em;
@@ -277,6 +294,7 @@ label span {
   color: #bbbbbb;
   margin-bottom: 1em;
 }
+
 .carrousel .slides {
   width: 400%;
   left: 0;
@@ -285,23 +303,27 @@ label span {
   overflow: hidden;
   list-style: none;
   position: relative;
- 
+
   -webkit-transition: transform .5s;
   -moz-transition: transform .5s;
   -o-transition: transform .5s;
   transition: transform .5s;
 }
+
 .carrousel .slides li {
   width: 25%;
   position: relative;
   float: left;
 }
+
 .carrousel .slides li .slide {
   width: 100%;
 }
-.carrousel li p{
-  margin-top: 0;  
+
+.carrousel li p {
+  margin-top: 0;
 }
+
 .carrousel li q {
   max-width: 90%;
   margin: auto;
@@ -319,8 +341,9 @@ label span {
   margin-right: 0.5em;
   vertical-align: middle;
 }
+
 .carrousel li span.author {
-  margin-top:0.5em;
+  margin-top: 0.5em;
   font-size: 1.2em;
   color: #777777;
   display: block;
@@ -332,16 +355,21 @@ label span {
   text-align: center;
   bottom: 1em;
   /*--- Centering trick---*/
-    /* Absolute positioning*/
-    position: absolute; 
-    /* Abosulte positioning*/
-    width: 104px; /*This width  is the addition of the width of all the navigations dots - So in this case is   104 because the navigation dots are 26px (width:10px and 6px marginleft + 6 px marginright) and there are 4 dots so 4x26=104 */
-    left: 50%; /*Centering de element*/
-    margin-left: -52px; /*adjusting the centering by applying a negative margin of half of the width*/
+  /* Absolute positioning*/
+  position: absolute;
+  /* Abosulte positioning*/
+  width: 104px;
+  /*This width  is the addition of the width of all the navigations dots - So in this case is   104 because the navigation dots are 26px (width:10px and 6px marginleft + 6 px marginright) and there are 4 dots so 4x26=104 */
+  left: 50%;
+  /*Centering de element*/
+  margin-left: -52px;
+  /*adjusting the centering by applying a negative margin of half of the width*/
 }
+
 .carrousel input {
   display: none;
 }
+
 .carrousel .slidesNavigation label {
   float: left;
   margin: 6px;
@@ -353,32 +381,143 @@ label span {
   border: solid 2px #2980b9;
   font-size: 0;
 }
+
 /* You have to repeat this with each slide
 TODO: make it easier with SCSS
 25% movement 100/slides-num
 */
-#radio-1:checked ~ .slides {
+#radio-1:checked~.slides {
   transform: translateX(0%);
 }
-#radio-2:checked ~ .slides {
+
+#radio-2:checked~.slides {
   transform: translateX(-25%);
 }
-#radio-3:checked ~ .slides {
+
+#radio-3:checked~.slides {
   transform: translateX(-50%);
 }
-#radio-4:checked ~ .slides {
+
+#radio-4:checked~.slides {
   transform: translateX(-75%);
 }
- 
- 
+
+
 .carrousel .slidesNavigation label:hover {
-   cursor: pointer;
+  cursor: pointer;
 }
+
 /* You have to repeat this with each slide/dot */
-.carrousel #radio-1:checked ~ .slidesNavigation label#dotForRadio-1,
-.carrousel #radio-2:checked ~ .slidesNavigation label#dotForRadio-2,
-.carrousel #radio-3:checked ~ .slidesNavigation label#dotForRadio-3,
-.carrousel #radio-4:checked ~ .slidesNavigation label#dotForRadio-4 {
+.carrousel #radio-1:checked~.slidesNavigation label#dotForRadio-1,
+.carrousel #radio-2:checked~.slidesNavigation label#dotForRadio-2,
+.carrousel #radio-3:checked~.slidesNavigation label#dotForRadio-3,
+.carrousel #radio-4:checked~.slidesNavigation label#dotForRadio-4 {
   background: #2980b9;
 }
- 
+
+
+
+
+
+.badge {
+  box-sizing: border-box;
+  /* display: inline-block; */
+  background-color: #2c3e50;
+  color: #ffffff;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.05rem 0.8rem 0.1rem;
+  line-height: inherit;
+  position: relative;
+  top: -16px;
+  left: -11px;
+}
+
+.badge--line {
+  background-color: transparent;
+  color: #95a5a6;
+  box-shadow: 0 0 0 1px #95a5a6;
+}
+
+.badge--info {
+  background-color: #3498db;
+}
+
+.badge--warning {
+  background-color: #f1c40f;
+}
+
+.badge--danger {
+  background-color: #e74c3c;
+}
+
+.badge--success {
+  background-color: #2ecc71;
+}
+
+.badge--small {
+  font-size: 1.2rem;
+  padding: .1rem .65rem .2rem;
+}
+
+.badge--smaller {
+  font-size: .7rem;
+  padding: .05rem .4rem .15rem;
+}
+
+
+.subscribe {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  overflow: auto;
+}
+
+.subscribe h2 {
+  margin-bottom: 30px;
+}
+
+.subscribe form {
+  width: 100%;
+}
+
+.subscribe input {
+  /* display: inline-block; */
+  width: 100%;
+	 float: left;
+	 padding: 15px 20px;
+	 text-align: center;
+	 font-family: inherit;
+	 font-size: 1.1rem;
+	 letter-spacing: 0.05rem;
+	 outline: 0;
+}
+.subscribe input[type=email] {
+  width: 76%;
+  margin-bottom: 15px;
+  border: 1px solid #bec1c5;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+
+}
+.subscribe input[type=submit] {
+  width: 17%;
+  background-color: #8e6ac1;
+  color: #fff;
+  border: 1px solid #8e6ac1;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.subscribe input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #7349af;
+  border-color: #7349af;
+}
