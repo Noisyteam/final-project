@@ -1,7 +1,7 @@
 /* global Product, Cart */
 
 'use strict';
-
+var emailForm = document.getElementById('email_form');
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
 
@@ -10,6 +10,17 @@ var cart = new Cart([]);
 // var itemCount = document.getElementById('itemCount');
 var productSection = document.getElementById('productSection');
 var featurerProductSection = document.getElementById('featurerProductSection');
+
+
+
+//Email Subscription
+var Email = function(email) {
+  this.email = email
+  Email.allEmails.push(this);
+  localStorage.setItem('EmailList', JSON.stringify(Email.allEmails));
+ };
+Email.allEmails = [];
+
 
 // var ul = document.createElement('ul');
 // cartContents.appendChild(ul);
@@ -41,7 +52,7 @@ function populateForm() {
       div.setAttribute('class', 'card');
       div.setAttribute('id', 'newProduct' + Product.allProducts[i].id);
 
-      div.innerHTML = '<a href="productDetail.html"><img src="'+Product.allProducts[i].filePath+'" alt="Denim Jeans" style="width:100%">' +
+      div.innerHTML = '<a onclick = "saveIDToLocalStorage('+Product.allProducts[i].id+')"  href="productDetail.html"><img src="'+Product.allProducts[i].filePath+'" alt="Denim Jeans" style="width:100%">' +
         '<h2>'+Product.allProducts[i].name+'</h2>' +
         '<p class="price">'+ Product.allProducts[i].price +'</p></a>' +
         '<button onClick="handleSubmit(this);">Add to Cart</button>';
@@ -83,6 +94,9 @@ function populateForm() {
   }
 }
 
+function saveIDToLocalStorage(id) {
+  localStorage.setItem('selectedItem', JSON.stringify(id));
+}
 // When someone submits the form, we need to add the selected item to the cart
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
@@ -140,3 +154,11 @@ function updateCartPreview() {
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
 populateForm();
+//Event Handler
+function addNewEmail(event) {
+  var newEmail = event.target.email.value;
+  event.preventDefault();
+   new Email(newEmail);
+ }
+ //Event Listener
+emailForm.addEventListener('submit', addNewEmail);
