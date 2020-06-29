@@ -30,7 +30,7 @@ function populateForm() {
   }
 
   for (var i in Product.allProducts) {
-    if(i < 5) {
+    if(i < 4) {
       console.log(Product.allProducts[i]);
       // var optionElement = document.createElement('option');
       // optionElement.textContent = Product.allProducts[i].name;
@@ -50,7 +50,7 @@ function populateForm() {
   }
 
   for (var i in Product.allProducts) {
-    if(i < 5) {
+    if(i < 4) {
       console.log(Product.allProducts[i]);
       // var optionElement = document.createElement('option');
       // optionElement.textContent = Product.allProducts[i].name;
