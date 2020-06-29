@@ -58,7 +58,7 @@ function handleSubmit(event) {
 function addNewProduct(event) {
     event.preventDefault();
     
-    var counter = Product.length + 1;
+    var counter = Product.allProducts.length + 1;
 
     new Product(counter,'', 'test', 15, 'test details');
     var div = document.createElement('div');
