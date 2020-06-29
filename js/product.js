@@ -1,15 +1,13 @@
-/* global Product, Cart */
+/* global Product */
 
 'use strict';
 
-// Set up an empty cart for use on this page.
 var cart = new Cart([]);
 
 // var txtQuantity = document.getElementById('quantity');
 // var cartContents = document.getElementById('cartContents');
 // var itemCount = document.getElementById('itemCount');
-var productSection = document.getElementById('productSection');
-var featurerProductSection = document.getElementById('featurerProductSection');
+var productContaainer = document.getElementById('productContaainer');
 
 // var ul = document.createElement('ul');
 // cartContents.appendChild(ul);
@@ -22,15 +20,7 @@ function populateForm() {
   //TODO: Add an <option> tag inside the form's select for each product
   // var selectElement = document.getElementById('items');
 
-  var reviewList = document.getElementById('userReviewSlides');
-
-
-  for (var x in Slider.allSliders) {
-    
-  }
-
   for (var i in Product.allProducts) {
-    if(i < 4) {
       console.log(Product.allProducts[i]);
       // var optionElement = document.createElement('option');
       // optionElement.textContent = Product.allProducts[i].name;
@@ -45,41 +35,7 @@ function populateForm() {
         '<h2>'+Product.allProducts[i].name+'</h2>' +
         '<p class="price">'+ Product.allProducts[i].price +'</p></a>' +
         '<button onClick="handleSubmit(this);">Add to Cart</button>';
-        productSection.appendChild(div);
-      }
-  }
-
-  for (var i in Product.allProducts) {
-    if(i < 4) {
-      console.log(Product.allProducts[i]);
-      // var optionElement = document.createElement('option');
-      // optionElement.textContent = Product.allProducts[i].name;
-      // optionElement.setAttribute('value', Product.allProducts[i].name);
-      // selectElement.appendChild(optionElement);
-
-      var div = document.createElement('div');
-      div.setAttribute('class', 'card');
-      div.setAttribute('id', 'featureProduct' + Product.allProducts[i].id);
-      div.innerHTML = '<a href="productDetail.html"><img src="'+Product.allProducts[i].filePath+'" alt="Denim Jeans" style="width:100%">' +
-        '<h2>'+Product.allProducts[i].name+'</h2>' +
-        '<p class="price">'+ Product.allProducts[i].price +'</p></a>' +
-        '<button onClick="handleSubmit(this);">Add to Cart</button>';
-        featurerProductSection.appendChild(div);
-      }
-  }
-
-  for (var i in UserReview.allReviews) {
-    var li = document.createElement('li');
-    li.innerHTML = '<li class="slide">' +
-          '<p>' +
-            '<q>'+ UserReview.allReviews[i].reviewText  +'</q>' +
-            '<span class="author">' +
-              '<img src="'+ UserReview.allReviews[i].imgPath  +'">' +
-              UserReview.allReviews[i].name + '' +
-            '</img></span>' +
-          '</p>' +
-        '</li>';
-        reviewList.appendChild(li);
+        productContaainer.appendChild(div);
   }
 }
 
@@ -96,6 +52,24 @@ function handleSubmit(event) {
   cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
+
+}
+
+function addNewProduct(event) {
+    event.preventDefault();
+    
+    var counter = Product.length + 1;
+
+    new Product(counter,'', 'test', 15, 'test details');
+    var div = document.createElement('div');
+    div.setAttribute('class', 'card');
+    div.setAttribute('id', 'newProduct' + counter);
+
+    div.innerHTML = '<a href="productDetail.html"><img src="" alt="Denim Jeans" style="width:100%">' +
+      '<h2>test</h2>' +
+      '<p class="price">22</p></a>' +
+      '<button onClick="handleSubmit(this);">Add to Cart</button>';
+      productContaainer.appendChild(div);
 
 }
 
@@ -131,11 +105,38 @@ function updateCartPreview() {
   
 }
 
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
-// var catalogForm = document.getElementById('catalog');
-// catalogForm.addEventListener('submit', handleSubmit);
+var productForm = document.getElementById('productForm');
+productForm.addEventListener('submit', addNewProduct);
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
