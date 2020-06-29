@@ -56,10 +56,14 @@ function handleSubmit(event) {
 }
 
 function addNewProduct(event) {
-    new Product(22,'', 'test', 15, 'test details');
+    event.preventDefault();
+    
+    var counter = Product.length + 1;
+
+    new Product(counter,'', 'test', 15, 'test details');
     var div = document.createElement('div');
     div.setAttribute('class', 'card');
-    div.setAttribute('id', 'newProduct' + Product.allProducts[i].id);
+    div.setAttribute('id', 'newProduct' + counter);
 
     div.innerHTML = '<a href="productDetail.html"><img src="" alt="Denim Jeans" style="width:100%">' +
       '<h2>test</h2>' +
@@ -131,8 +135,8 @@ window.onclick = function(event) {
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
-var catalogForm = document.getElementById('catalog');
-catalogForm.addEventListener('submit', handleSubmit);
+var productForm = document.getElementById('productForm');
+productForm.addEventListener('submit', addNewProduct);
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.

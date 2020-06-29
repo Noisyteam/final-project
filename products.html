@@ -94,11 +94,46 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
-                <h2>Modal Header</h2>
+                <h2>Add new products</h2>
             </div>
             <div class="modal-body">
-                <p>Some text in the Modal Body</p>
-                <p>Some other text...</p>
+                <form id="productForm">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">Product Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="pname" name="product" placeholder="Product name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Price</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="price" name="price" placeholder="Product price">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="country">Product details</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea name="details" id="" cols="30" rows="10" placeholder="Write something.."></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="subject">Image</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="file">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <h3>Modal Footer</h3>
