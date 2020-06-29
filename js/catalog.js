@@ -41,9 +41,9 @@ function populateForm() {
       div.setAttribute('class', 'card');
       div.setAttribute('id', 'newProduct' + Product.allProducts[i].id);
 
-      div.innerHTML = '<img src="'+Product.allProducts[i].filePath+'" alt="Denim Jeans" style="width:100%">' +
+      div.innerHTML = '<a href="productDetail.html"><img src="'+Product.allProducts[i].filePath+'" alt="Denim Jeans" style="width:100%">' +
         '<h2>'+Product.allProducts[i].name+'</h2>' +
-        '<p class="price">$'+Product.allProducts[i].price+'</p>' +
+        '<p class="price">'+ Product.allProducts[i].price +'</p></a>' +
         '<button onClick="handleSubmit(this);">Add to Cart</button>';
         productSection.appendChild(div);
       }
@@ -60,9 +60,9 @@ function populateForm() {
       var div = document.createElement('div');
       div.setAttribute('class', 'card');
       div.setAttribute('id', 'featureProduct' + Product.allProducts[i].id);
-      div.innerHTML = '<img src="'+Product.allProducts[i].filePath+'" alt="Denim Jeans" style="width:100%">' +
+      div.innerHTML = '<a href="productDetail.html"><img src="'+Product.allProducts[i].filePath+'" alt="Denim Jeans" style="width:100%">' +
         '<h2>'+Product.allProducts[i].name+'</h2>' +
-        '<p class="price">$'+Product.allProducts[i].price+'</p>' +
+        '<p class="price">'+ Product.allProducts[i].price +'</p></a>' +
         '<button onClick="handleSubmit(this);">Add to Cart</button>';
         featurerProductSection.appendChild(div);
       }
