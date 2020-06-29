@@ -1,6 +1,6 @@
 'use strict';
 
-var emailForm = document.getElementById('email_form');
+ 
 // Cart constructor.
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -35,13 +35,7 @@ var CartItem = function(product, quantity, img, price) {
   this.price = price;
 };
 
-//Email Subscription
-var Email = function(email) {
-  this.email = email
-  Email.allEmails.push(this);
-  localStorage.setItem('EmailList', JSON.stringify(Email.allEmails));
- };
-Email.allEmails = [];
+ 
 
 // UsersReview constructorr
 var UserReview = function(id, name, reviewText, imgPath) {
@@ -87,36 +81,28 @@ var Product = function(id, filePath, name, price, details) {
 Product.allProducts = [];
 
 function generateCatalog() {
-  new Product(1,'assets/bag.jpg', 'Bag', 22, 'details test');
-  new Product(2,'assets/banana.jpg', 'Banana', 22, 'details test');
-  new Product(3,'assets/bathroom.jpg', 'Bathroom', 22, 'details test');
-  new Product(4,'assets/boots.jpg', 'Boots', 22, 'details test');
-  new Product(5,'assets/breakfast.jpg', 'Breakfast', 22, 'details test');
-  new Product(6,'assets/bubblegum.jpg', 'Bubblegum', 22, 'details test');
-  new Product(7,'assets/chair.jpg', 'Chair', 22, 'details test');
-  new Product(8,'assets/cthulhu.jpg', 'Cthulhu', 22, 'details test');
-  new Product(9,'assets/dog-duck.jpg', 'Dog-Duck', 22, 'details test');
-  new Product(10,'assets/dragon.jpg', 'Dragon', 22, 'details test');
-  new Product(11,'assets/pen.jpg', 'Pen', 22, 'details test');
-  new Product(12,'assets/pet-sweep.jpg', 'Pet Sweep', 22, 'details test');
-  new Product(13,'assets/scissors.jpg', 'Scissors', 22, 'details test');
-  new Product(14,'assets/shark.jpg', 'Shark', 22, 'details test');
-  new Product(15,'assets/sweep.png', 'Sweep', 22, 'details test');
-  new Product(16,'assets/tauntaun.jpg', 'Taun-Taun', 22, 'details test');
-  new Product(17,'assets/unicorn.jpg', 'Unicorn', 22, 'details test');
-  new Product(18,'assets/usb.gif', 'USB', 22, 'details test');
-  new Product(19,'assets/water-can.jpg', 'Water Can', 22, 'details test');
-  new Product(20,'assets/wine-glass.jpg', 'Wine Glass', 22, 'details test');
+  new Product(1,'assets/bag.jpg', 'Bag', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(2,'assets/banana.jpg', 'Banana', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(3,'assets/bathroom.jpg', 'Bathroom', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(4,'assets/boots.jpg', 'Boots', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(5,'assets/breakfast.jpg', 'Breakfast', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(6,'assets/bubblegum.jpg', 'Bubblegum', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(7,'assets/chair.jpg', 'Chair', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(8,'assets/cthulhu.jpg', 'Cthulhu', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(9,'assets/dog-duck.jpg', 'Dog-Duck', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(10,'assets/dragon.jpg', 'Dragon', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(11,'assets/pen.jpg', 'Pen', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(12,'assets/pet-sweep.jpg', 'Pet Sweep', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(13,'assets/scissors.jpg', 'Scissors', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo');
+  new Product(14,'assets/shark.jpg', 'Shark', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(15,'assets/sweep.png', 'Sweep', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(16,'assets/tauntaun.jpg', 'Taun-Taun', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo');
+  new Product(17,'assets/unicorn.jpg', 'Unicorn', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo');
+  new Product(18,'assets/usb.gif', 'USB', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo');
+  new Product(19,'assets/water-can.jpg', 'Water Can', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
+  new Product(20,'assets/wine-glass.jpg', 'Wine Glass', 22, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iusto fuga repellendus reiciendis aliquam animi ad sunt fugit cupiditate! Quae dolorem dicta laudantium iure tenetur fugit error nesciunt! Recusandae, illo!');
 }
-//Event Handler
-function addNewEmail(event) {
-  var newEmail = event.target.email.value;
-  event.preventDefault();
-   new Email(newEmail);
- }
-  
-//Event Listener
-emailForm.addEventListener('submit', addNewEmail);
+
 
 
 // Initialize the app by creating the big list of products with images and names
