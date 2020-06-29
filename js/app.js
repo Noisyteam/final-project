@@ -1,5 +1,6 @@
 'use strict';
 
+var emailForm = document.getElementById('email_form');
 // Cart constructor.
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -33,6 +34,14 @@ var CartItem = function(product, quantity, img, price) {
   this.img = img;
   this.price = price;
 };
+
+//Email Subscription
+var Email = function(email) {
+  this.email = email
+  Email.allEmails.push(this);
+  localStorage.setItem('EmailList', JSON.stringify(Email.allEmails));
+ };
+Email.allEmails = [];
 
 // UsersReview constructorr
 var UserReview = function(id, name, reviewText, imgPath) {
@@ -99,6 +108,16 @@ function generateCatalog() {
   new Product(19,'assets/water-can.jpg', 'Water Can', 22, 'details test');
   new Product(20,'assets/wine-glass.jpg', 'Wine Glass', 22, 'details test');
 }
+//Event Handler
+function addNewEmail(event) {
+  var newEmail = event.target.email.value;
+  event.preventDefault();
+   new Email(newEmail);
+ }
+  
+//Event Listener
+emailForm.addEventListener('submit', addNewEmail);
+
 
 // Initialize the app by creating the big list of products with images and names
 generateSlider();
