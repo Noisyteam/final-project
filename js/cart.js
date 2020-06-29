@@ -90,6 +90,7 @@ function showCart() {
    
   }
   document.getElementById('totalOfTotals').textContent = '$' + totalPrice;
+   totalPrice = 0;
 
 }
 
