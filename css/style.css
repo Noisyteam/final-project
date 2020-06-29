@@ -127,45 +127,16 @@ main {
   min-height: calc(100% - 9.5em);
   height: auto !important;
   text-shadow: white -1px 1px;
+  padding: 0em;
+  padding-bottom: 1.5em;
 }
-
-/* footer {
-  background: #113f67;
-  border-top: 1px solid #ccc;
-  color: #fff;
-  display: block;
-  height: 1.5em;
-  padding: .5em 5em;
-  text-align: center;
-} */
-
-/* .deck {
-  overflow:hidden;
-} */
-
-/* .card {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-
-/* .section-1 .card {
-  float: left;
-  width: 45%;
-} */
-
-/* .card header {
-  background: #438a5e;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  color: #fff;
-  padding: .5em;
-  text-align: center;
-  text-shadow: none;
-} */
 
 .card .copy {
   padding: 1.5em;
+}
+
+#productContaainer .card:nth-child(5n) {
+  margin-right: 0;
 }
 
 .copy ol li {
@@ -215,7 +186,7 @@ label span {
 }
 
 .gallery {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .gallery a{
@@ -309,7 +280,7 @@ padding: 10px;
 
 #productSection, #featurerProductSection {
   clear: both;
-  width: 98%;
+  width: 100%;
   margin: auto;
 }
 
@@ -750,4 +721,122 @@ footer .footer-logo img{
 .footer-second-row {
   text-align: right;
   padding: 18px 20px;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 25px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 25px 16px;}
+
+.modal-footer {
+  padding: 25px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.modal-body label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.modal-body input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.modal-body input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.modal-body .col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.modal-body .col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.modal-body .row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
