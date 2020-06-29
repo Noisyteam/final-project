@@ -6,6 +6,7 @@ var table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 var carts = new Cart([]);
 var cart;
+var totalPrice = 0;
 
 
 
@@ -69,8 +70,9 @@ function showCart() {
     pTD.textContent ="$"+ cart.items[i].price;
 
     var tTD = document.createElement('td');
-    tTD.textContent = cart.items[i].price*cart.items[i].quantity;
+    tTD.textContent = '$' + cart.items[i].price*cart.items[i].quantity;
 
+    totalPrice += cart.items[i].price*cart.items[i].quantity;
 
     var qTD = document.createElement('td');
     qTD.textContent = cart.items[i].quantity;
@@ -87,6 +89,8 @@ function showCart() {
     tr.appendChild(tTD);
    
   }
+  document.getElementById('totalOfTotals').textContent = '$' + totalPrice;
+
 }
 
 function removeItemFromCart(event) {

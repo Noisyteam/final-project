@@ -17,7 +17,7 @@ function TeamMember(name, url, title, email, socialMedia) {
 
 new TeamMember(
   "Walid Afifi",
-  "https://www.w3schools.com/howto/img_avatar.png",
+  "https://ca.slack-edge.com/TNGRRLUMA-U012Q5MDF4L-dccfd6bec4d1-512",
   "Team Leader",
   "waleed-afifi@windowslive.com",
   ["", "", "https://github.com/waleedafifi90"]
@@ -27,7 +27,7 @@ new TeamMember(
 );
 new TeamMember(
   "Hidaya Syam",
-  "https://www.w3schools.com/howto/img_avatar.png",
+  "https://ca.slack-edge.com/TNGRRLUMA-U012GJX14FP-c3e33099afd8-512",
   "developer",
   "hidayasyam98@gmail.com",
   ["", "", "https://github.com/HidayaSyam"]
@@ -35,7 +35,7 @@ new TeamMember(
 );
 new TeamMember(
   "Shadi Zaqout",
-  "https://www.w3schools.com/howto/img_avatar.png",
+  "https://ca.slack-edge.com/TNGRRLUMA-U012J0NNTSN-ea21498c5418-512",
   "developer",
   "shadizaqout@gmail.com",
   ["", "", "https://github.com/shadizak"]
@@ -43,7 +43,7 @@ new TeamMember(
 );
 new TeamMember(
   "Raghad Anees",
-  "https://www.w3schools.com/howto/img_avatar.png",
+  "https://ca.slack-edge.com/TNGRRLUMA-U013538G9QW-d0f43a465ecf-512",
   "developer",
   "Raghad.anees@hotmail.com",
 ["https://web.facebook.com/raghad.an.18","https://www.linkedin.com/in/raghad-anees/", "https://github.com/raghadanees"]
@@ -51,7 +51,7 @@ new TeamMember(
 );
 new TeamMember(
   "Zaid Nusair",
-  "https://www.w3schools.com/howto/img_avatar.png",
+  "https://ca.slack-edge.com/TNGRRLUMA-U012J6UMT27-c9b9d891c533-512",
   "developer",
   "zaid.nusair@hotmail.com",
   ["https://web.facebook.com/zaid.nesairat/", "", "https://github.com/zaidnusair"]
