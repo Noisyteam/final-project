@@ -29,6 +29,10 @@ header h2 {
 
 }
 
+header img {
+  width: 150px;
+}
+
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.w3schools.com/howto/photographer.jpg");
   height: 80vh;

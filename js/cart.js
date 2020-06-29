@@ -69,7 +69,7 @@ function showCart() {
     pTD.textContent ="$"+ cart.items[i].price;
 
     var tTD = document.createElement('td');
-    tTD.textContent = "$"+cart.items[i].price*cart.items[i].quantity;
+    tTD.textContent = cart.items[i].price*cart.items[i].quantity;
 
 
     var qTD = document.createElement('td');
