@@ -17,7 +17,7 @@ function TeamMember(name, url, title, email, socialMedia) {
 
 new TeamMember(
   "Walid Afifi",
-  "assets/bag.jpg",
+  "https://www.w3schools.com/howto/img_avatar.png",
   "Team Leader",
   "waleed-afifi@windowslive.com",
   ["", "", "https://github.com/waleedafifi90"]
@@ -27,7 +27,7 @@ new TeamMember(
 );
 new TeamMember(
   "Hidaya Syam",
-  "assets/scissors.jpg",
+  "https://www.w3schools.com/howto/img_avatar.png",
   "developer",
   "hidayasyam98@gmail.com",
   ["", "", "https://github.com/HidayaSyam"]
@@ -35,7 +35,7 @@ new TeamMember(
 );
 new TeamMember(
   "Shadi Zaqout",
-  "assets/shark.jpg",
+  "https://www.w3schools.com/howto/img_avatar.png",
   "developer",
   "shadizaqout@gmail.com",
   ["", "", "https://github.com/shadizak"]
@@ -43,7 +43,7 @@ new TeamMember(
 );
 new TeamMember(
   "Raghad Anees",
-  "assets/pen.jpg",
+  "https://www.w3schools.com/howto/img_avatar.png",
   "developer",
   "Raghad.anees@hotmail.com",
 ["https://web.facebook.com/raghad.an.18","https://www.linkedin.com/in/raghad-anees/", "https://github.com/raghadanees"]
@@ -51,7 +51,7 @@ new TeamMember(
 );
 new TeamMember(
   "Zaid Nusair",
-  "assets/dragon.jpg",
+  "https://www.w3schools.com/howto/img_avatar.png",
   "developer",
   "zaid.nusair@hotmail.com",
   ["https://web.facebook.com/zaid.nesairat/", "", "https://github.com/zaidnusair"]
