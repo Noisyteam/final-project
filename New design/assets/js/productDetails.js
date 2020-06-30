@@ -5,9 +5,11 @@ var productPrice = document.getElementById("productPrice");
 var productImage = document.getElementById("productImge");
 var productDescription = document.getElementById("productDescription");
 var quantity = document.getElementById('quantity');
+var items =  JSON.parse(localStorage.getItem('cart')) || [];
 var item = localStorage.getItem('selectedItem');
 var cart = new Cart([]);
-
+  
+console.log("rrrrr" + item);
 function getItem(){
     for (var i = 0; i < Product.allProducts.length; i++) {
         if (Product.allProducts[i].id == item) {
@@ -18,10 +20,10 @@ function getItem(){
 
         }
     }
-    console.log(item);
+    console.log(items);
 }
 
-// TODO: Add the selected item and quantity to the cart
+//TODO: Add the selected item and quantity to the cart
 function addToCart(event) {
     // TODO: suss out the item picked from the select list
     // TODO: get the quantity

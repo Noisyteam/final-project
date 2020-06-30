@@ -85,7 +85,7 @@ function populateForm() {
         div.innerHTML = '<div class="col-md-4">'+
         '<div class="productwrap">'+
           '<div class="pr-img">'+
-            '<a href="productdetails.html"><img src="'+Product.allProducts[i].filePath+'" alt="" class="img-responsive"/></a>'+
+            '<a onclick = "saveIDToLocalStorage('+Product.allProducts[i].id+')" href="productdetails.html"><img src="'+Product.allProducts[i].filePath+'" alt="" class="img-responsive"/></a>'+
             '<div class="pricetag on-sale"><div class="inner on-sale"><span class="onsale"><span class="oldprice">$314</span>$'+Product.allProducts[i].price+'</span></div></div>'+
          ' </div>'+
           '<span class="smalltitle"><a href="product.html">'+Product.allProducts[i].name+'</a></span>'+
