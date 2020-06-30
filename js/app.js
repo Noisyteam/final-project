@@ -17,8 +17,17 @@ Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
   // console.log(JSON.stringify(cart.items));
   // console.log(JSON.parse(JSON.stringify(cart.items)));
+  // Get the existing data 
+  var existing = localStorage.getItem('cart');
+  // If no existing data, create an array
+  // Otherwise, convert the localStorage string to an array 
+  existing = existing ? existing.split(',') : [];
+  // Add new data to localStorage Array 
+  existing.push(this.items);
+  // Save back to localStorage 
+  localStorage.setItem('cart', JSON.stringify(existing));
 
-  localStorage.setItem('cart', JSON.stringify(this.items));
+  //localStorage.setItem('cart', JSON.stringify(this.items));
   console.log(localStorage.getItem('cart'));
 };
 
