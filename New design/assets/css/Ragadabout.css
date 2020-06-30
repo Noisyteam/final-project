@@ -91,4 +91,12 @@
       display: block;
     }
   }
-  
+
+  /* .container a i {
+    background-color: #333;
+    color:red ;
+  } */
+  .container a i:hover{
+    background: #fff !important;
+  color: #333 !important;
+}

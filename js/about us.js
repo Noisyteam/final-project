@@ -46,7 +46,7 @@ new TeamMember(
   "https://ca.slack-edge.com/TNGRRLUMA-U013538G9QW-d0f43a465ecf-512",
   "developer",
   "Raghad.anees@hotmail.com",
-["https://web.facebook.com/raghad.an.18","https://www.linkedin.com/in/raghad-anees/", "https://github.com/raghadanees"]
+["","", "https://github.com/raghadanees"]
   
 );
 new TeamMember(
