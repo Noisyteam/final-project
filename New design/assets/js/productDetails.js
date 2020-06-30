@@ -7,10 +7,13 @@ var productDescription = document.getElementById("productDescription");
 var quantity = document.getElementById('quantity');
 var items =  JSON.parse(localStorage.getItem('cart')) || [];
 var item = localStorage.getItem('selectedItem');
-var cart = new Cart([]);
+var cart;
   
 console.log("rrrrr" + item);
 function getItem(){
+    var cartItem = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = new Cart(cartItem);
+    
     for (var i = 0; i < Product.allProducts.length; i++) {
         if (Product.allProducts[i].id == item) {
             productName.innerHTML = Product.allProducts[i].name;
@@ -34,7 +37,7 @@ function addToCart(event) {
     var price = productPrice.innerHTML;
     var img = productImage.src;
     var qyt = quantity.value;
-  
+    console.log('addTocart Fun',localStorage.getItem('cart'));
     cart.addItem(item, qyt, img, price);
 
     cart.saveToLocalStorage();

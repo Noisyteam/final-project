@@ -42,7 +42,7 @@ function populateForm() {
 
   for (var i in Product.allProducts) {
     if(i < 20) {
-      console.log(Product.allProducts[i]);
+     // console.log(Product.allProducts[i]);
       // var optionElement = document.createElement('option');
       // optionElement.textContent = Product.allProducts[i].name;
       // optionElement.setAttribute('value', Product.allProducts[i].name);
@@ -68,7 +68,7 @@ function populateForm() {
 
   for (var i in Product.allProducts) {
     if(i < 6) {
-      console.log(Product.allProducts[i]);
+      //console.log(Product.allProducts[i]);
       // var optionElement = document.createElement('option');
       // optionElement.textContent = Product.allProducts[i].name;
       // optionElement.setAttribute('value', Product.allProducts[i].name);
@@ -96,19 +96,19 @@ function populateForm() {
       }
   }
 
-  for (var i in UserReview.allReviews) {
-    var li = document.createElement('li');
-    li.innerHTML = '<li class="slide">' +
-          '<p>' +
-            '<q>'+ UserReview.allReviews[i].reviewText  +'</q>' +
-            '<span class="author">' +
-              '<img src="'+ UserReview.allReviews[i].imgPath  +'">' +
-              UserReview.allReviews[i].name + '' +
-            '</img></span>' +
-          '</p>' +
-        '</li>';
-        reviewList.appendChild(li);
-  }
+  // for (var i in UserReview.allReviews) {
+  //   var li = document.createElement('li');
+  //   li.innerHTML = '<li class="slide">' +
+  //         '<p>' +
+  //           '<q>'+ UserReview.allReviews[i].reviewText  +'</q>' +
+  //           '<span class="author">' +
+  //             '<img src="'+ UserReview.allReviews[i].imgPath  +'">' +
+  //             UserReview.allReviews[i].name + '' +
+  //           '</img></span>' +
+  //         '</p>' +
+  //       '</li>';
+  //       reviewList.appendChild(li);
+  // }
 }
 
 function saveIDToLocalStorage(id) {
@@ -178,4 +178,4 @@ function addNewEmail(event) {
    new Email(newEmail);
  }
  //Event Listener
-emailForm.addEventListener('submit', addNewEmail);
+//emailForm.addEventListener('submit', addNewEmail);
