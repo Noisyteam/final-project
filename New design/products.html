@@ -371,10 +371,13 @@
                     </div>
                     <div class="row">
                         <div class="col-25">
-                            <label for="subject" id="pImg">Image</label>
+                            <!-- <label for="subject" id="pImg">Image</label> -->
+                            <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+                            <img id="output" width="200" />
                         </div>
                         <div class="col-75">
-                            <input type="file">
+                            <!-- <input type="file"> -->
+                            <input type="file"  accept="image/gif, image/jpeg, image/png" name="image" id="file" onchange="loadFile(event)" style="display: none;">
                         </div>
                     </div>
                     <div class="row">

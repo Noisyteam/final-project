@@ -34,16 +34,26 @@ function populateForm() {
       '<div class="productwrap">' +
       '<div class="pr-img">' +
       '<div class="hot"></div>' +
-      '<a onclick = "saveIDToLocalStorage('+Product.allProducts[i].id+')" href="productdetails.html"><img src="' + Product.allProducts[i].filePath + '" alt="" class="img-responsive"></a>' +
+      '<a onclick = "saveIDToLocalStorage(' +
+      Product.allProducts[i].id +
+      ')" href="productdetails.html"><img src="' +
+      Product.allProducts[i].filePath +
+      '" alt="" class="img-responsive"></a>' +
       '<div class="pricetag on-sale">' +
       '<div class="inner on-sale"><span class="onsale"><span' +
-      'class="oldprice"></span>$' + Product.allProducts[i].price + '</span></div>' +
-      '</div>' +
-      '</div>' +
-      '<span class="smalltitle"><a onclick = "saveIDToLocalStorage('+Product.allProducts[i].id+')" href="productdetails.html">' + Product.allProducts[i].name + '</a></span>' +
+      'class="oldprice"></span>$' +
+      Product.allProducts[i].price +
+      "</span></div>" +
+      "</div>" +
+      "</div>" +
+      '<span class="smalltitle"><a onclick = "saveIDToLocalStorage(' +
+      Product.allProducts[i].id +
+      ')" href="productdetails.html">' +
+      Product.allProducts[i].name +
+      "</a></span>" +
       '<span class="smalldesc">Item no.: 1000</span>' +
-      '</div>' +
-      '</div>';
+      "</div>" +
+      "</div>";
 
     productContaainer.appendChild(div);
   }
@@ -63,12 +73,23 @@ function handleSubmit(event) {
   updateCartPreview();
 }
 
+/////======================================================================trial===============================================================//////
+
+var loadFile = function (event) {
+  var image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+/////======================================================================trial===============================================================//////
+
 function addNewProduct(event) {
   event.preventDefault();
 
   var pname = document.getElementById("pname").value;
   var price = document.getElementById("price").value;
   var pdetails = document.getElementById("pdetails").value;
+  // var pImg = document.getElementById("pImg").;
+  // var pImg = event.target.files[0].mozFullPath;
 
   var counter = Product.allProducts.length + 1;
 
@@ -78,24 +99,31 @@ function addNewProduct(event) {
   div.setAttribute("id", "newProduct" + counter);
 
   div.innerHTML =
-  '<div class="col-md-4">' +
-  '<div class="productwrap">' +
-  '<div class="pr-img">' +
-  '<div class="hot"></div>' +
-  '<a onclick="saveIDToLocalStorage('+Product.allProducts[i].id+')" href="productdetails.html"><img src="https://gallery.autodesk.com/assets/default%20tile%20thumbnail.jpg" alt="" class="img-responsive"></a>' +
-  '<div class="pricetag on-sale">' +
-  '<div class="inner on-sale"><span class="onsale"><span' +
-  'class="oldprice"></span>$' + pname + '</span></div>' +
-  '</div>' +
-  '</div>' +
-  '<span class="smalltitle"><a href="productdetails.html">' + price + '</a></span>' +
-  '<span class="smalldesc">Item no.: 1000</span>' +
-  '</div>' +
-  '</div>';
+    '<div class="col-md-4">' +
+    '<div class="productwrap">' +
+    '<div class="pr-img">' +
+    '<div class="hot"></div>' +
+    '<a onclick="saveIDToLocalStorage(' +
+    1 +
+    ')" href="productdetails.html"><img src="' +
+    document.getElementById("output").src +
+    '" alt="" class="img-responsive"></a>' +
+    '<div class="pricetag on-sale">' +
+    '<div class="inner on-sale"><span class="onsale"><span' +
+    'class="oldprice"></span>$' +
+    price +
+    "</span></div>" +
+    "</div>" +
+    "</div>" +
+    '<span class="smalltitle"><a href="productdetails.html">' +
+    pname +
+    "</a></span>" +
+    '<span class="smalldesc">Item no.: 1000</span>' +
+    "</div>" +
+    "</div>";
   productContaainer.appendChild(div);
 
   modal.style.display = "none";
-
 }
 
 // TODO: Add the selected item and quantity to the cart
@@ -145,7 +173,6 @@ btn.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
-
 };
 
 // When the user clicks anywhere outside of the modal, close it
@@ -165,7 +192,7 @@ productForm.addEventListener("submit", addNewProduct);
 // drop down list in the form.
 
 function saveIDToLocalStorage(id) {
-  localStorage.setItem('selectedItem', JSON.stringify(id));
+  localStorage.setItem("selectedItem", JSON.stringify(id));
 }
 
 populateForm();
