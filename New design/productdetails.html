@@ -99,8 +99,7 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <a href="product.html"><img src="images/dummy-1.png" alt=""
-                                                    class="img-responsive" /></a>
+                                             
                                         </td>
                                         <td><a href="product.html">Casio Exilim Zoom</a><br /><span>Color: green</span>
                                         </td>
@@ -110,8 +109,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="product.html"><img src="images/dummy-1.png" alt=""
-                                                    class="img-responsive" /></a>
+                                             
                                         </td>
                                         <td><a href="product.html">Casio Exilim Zoom</a><br /><span>Color: green</span>
                                         </td>
@@ -121,8 +119,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="product.html"><img src="images/dummy-1.png" alt=""
-                                                    class="img-responsive" /></a>
+                                             
                                         </td>
                                         <td><a href="product.html">Casio Exilim Zoom</a><br /><span>Color: green</span>
                                         </td>
@@ -169,44 +166,51 @@
             </div>
         </div>
 
-
+        
         <div class="row">
+            <form id="productDetailsForm" role="form">
             <div class="col-md-9">
+             
                 <div class="title-bg">
-                    <div class="title" id="pname">Headphone</div>
+                    <div id="productName"class="title" >Headphone</div>
                 </div>
 
                 <div class="row">
+                     
                     <div class="col-md-6">
                         <div class="dt-img">
-                            <div class="detpricetag"><div class="inner">$199</div></div>
+
+                            <div class="detpricetag"><div id="productPrice" class="inner">$199</div></div>
                             <a href="#" data-fancybox-group="gallery" title="">
-                                <img src="images/crochet.jpg" alt="" class="img-responsive">
+                                <img id="productImge" src="images/crochet.jpg" alt="" class="img-responsive">
                             </a>
                             </div>
                     </div>
-
-                    <div class="col-md-6 det-desc">
+              
+                    <div  class="col-md-6 det-desc">
                         <div class="productdata">
                             <div>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dicta quas dolores
-                                    dolorem fugiat eaque inventore! Iusto ex ad aperiam at nemo fugiat impedit assumenda
+                                <p id="productDescription" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dicta quas dolores
+                                    dolorem fugiffffe! Iusto ex ad aperiam at nemo fugiat impedit assumenda
                                     excepturi inventore, accusamus cum eum. </p>
                             </div>
                             <div>
                                 <div class="col-md-8">
-                                    <input class="shop-tab-ct" type="number" placeholder="Enter Quntity" id="qyt">
+                                    <input class="shop-tab-ct" type="number"   id="quantity" name="quantity" min="1" value="1">
                                 </div>
                                 <div class="col-md-4">
+                                    
                                     <button class="btn btn-default btn-red btn-sm"><span class="addchart">Add To
                                             Chart</span></button>
 
                                 </div>
+                             
                             </div>
                         </div>
 
                     </div>
                 </div>
+            
             </div>
 
             <div class="col-md-3 ">
@@ -233,9 +237,9 @@
 					</ul>
 				</div>
             </div>
-
+        </form>
         </div>
-
+ 
     </div>
 
     </div>
@@ -259,7 +263,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                             ut labore et dolore magna aliqua.
                         </p>
-                        <form role="form">
+                        <form  role="form">
                             <div class="form-group">
                                 <label>Your Email address</label>
                                 <input type="email" class="form-control newstler-input" id="exampleInputEmail1"
@@ -326,6 +330,8 @@
     </div>
 
 
+    <script src='assets/js/app.js'></script>
+    <script src='assets/js/productDetails.js'></script>
 
 </body>
 

@@ -26,20 +26,35 @@ function populateForm() {
     // selectElement.appendChild(optionElement);
 
     var div = document.createElement("div");
-    div.setAttribute("class", "card");
+    // div.setAttribute("class", "card");
     div.setAttribute("id", "newProduct" + Product.allProducts[i].id);
 
     div.innerHTML =
-      '<a href="productDetail.html"><img src="' +
+      '<div class="col-md-4">' +
+      '<div class="productwrap">' +
+      '<div class="pr-img">' +
+      '<div class="hot"></div>' +
+      '<a onclick = "saveIDToLocalStorage(' +
+      Product.allProducts[i].id +
+      ')" href="productdetails.html"><img src="' +
       Product.allProducts[i].filePath +
-      '" alt="Denim Jeans" style="width:100%">' +
-      "<h2>" +
-      Product.allProducts[i].name +
-      "</h2>" +
-      '<p class="price">' +
+      '" alt="" class="img-responsive"></a>' +
+      '<div class="pricetag on-sale">' +
+      '<div class="inner on-sale"><span class="onsale"><span' +
+      'class="oldprice"></span>$' +
       Product.allProducts[i].price +
-      "</p></a>" +
-      '<button onClick="handleSubmit(this);">Add to Cart</button>';
+      "</span></div>" +
+      "</div>" +
+      "</div>" +
+      '<span class="smalltitle"><a onclick = "saveIDToLocalStorage(' +
+      Product.allProducts[i].id +
+      ')" href="productdetails.html">' +
+      Product.allProducts[i].name +
+      "</a></span>" +
+      '<span class="smalldesc">Item no.: 1000</span>' +
+      "</div>" +
+      "</div>";
+
     productContaainer.appendChild(div);
   }
 }
@@ -58,13 +73,23 @@ function handleSubmit(event) {
   updateCartPreview();
 }
 
+/////======================================================================trial===============================================================//////
+
+var loadFile = function (event) {
+  var image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+/////======================================================================trial===============================================================//////
+
 function addNewProduct(event) {
   event.preventDefault();
 
   var pname = document.getElementById("pname").value;
   var price = document.getElementById("price").value;
   var pdetails = document.getElementById("pdetails").value;
-  var pImg = document.getElementById("pImg").src;
+  // var pImg = document.getElementById("pImg").;
+  // var pImg = event.target.files[0].mozFullPath;
 
   var counter = Product.allProducts.length + 1;
 
@@ -74,15 +99,28 @@ function addNewProduct(event) {
   div.setAttribute("id", "newProduct" + counter);
 
   div.innerHTML =
-    '<a href="productDetail.html">' +
-    '<img src="pImg" style="width:100%">' +
-    "<h2>" +
-    pname +
-    "</h2>" +
-    '<p class="price">' +
+    '<div class="col-md-4">' +
+    '<div class="productwrap">' +
+    '<div class="pr-img">' +
+    '<div class="hot"></div>' +
+    '<a onclick="saveIDToLocalStorage(' +
+    1 +
+    ')" href="productdetails.html"><img src="' +
+    document.getElementById("output").src +
+    '" alt="" class="img-responsive"></a>' +
+    '<div class="pricetag on-sale">' +
+    '<div class="inner on-sale"><span class="onsale"><span' +
+    'class="oldprice"></span>$' +
     price +
-    "</p></a>" +
-    '<button onClick="handleSubmit(this);">Add to Cart</button>';
+    "</span></div>" +
+    "</div>" +
+    "</div>" +
+    '<span class="smalltitle"><a href="productdetails.html">' +
+    pname +
+    "</a></span>" +
+    '<span class="smalldesc">Item no.: 1000</span>' +
+    "</div>" +
+    "</div>";
   productContaainer.appendChild(div);
 
   modal.style.display = "none";
@@ -152,4 +190,9 @@ productForm.addEventListener("submit", addNewProduct);
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
+
+function saveIDToLocalStorage(id) {
+  localStorage.setItem("selectedItem", JSON.stringify(id));
+}
+
 populateForm();

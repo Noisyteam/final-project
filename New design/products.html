@@ -89,6 +89,7 @@
                                 <li><a href="aboutus.html">About</a></li>
                                 <li><a href="products.html">Product</a></li>
                                 <li><a href="contact.html">Contact</a></li>
+                                <li><a id="myBtn" href="#">Sell Today</a></li>
                             </ul>
                         </div>
                     </div>
@@ -179,118 +180,8 @@
                         <a href=""><i class="fa fa-bars"></i>List</a>
                     </div>
                 </div>
-                <div class="row prdct">
-                    <div class="col-md-4">
-                        <div class="productwrap">
-                            <div class="pr-img">
-                                <div class="hot"></div>
-                                <a href="product.html"><img src="images/crochet.jpg" alt="" class="img-responsive"></a>
-                                <div class="pricetag on-sale">
-                                    <div class="inner on-sale"><span class="onsale"><span
-                                                class="oldprice">$314</span>$199</span></div>
-                                </div>
-                            </div>
-                            <span class="smalltitle"><a href="product.html">Red T-Shirt</a></span>
-                            <span class="smalldesc">Item no.: 1000</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="productwrap">
-                            <div class="pr-img">
-                                <div class="new"></div>
-                                <a href="product.html"><img src="images/crochet.jpg" alt="" class="img-responsive"></a>
-                                <div class="pricetag blue">
-                                    <div class="inner">$199</div>
-                                </div>
-                            </div>
-                            <span class="smalltitle"><a href="product.html">Black Shoes</a></span>
-                            <span class="smalldesc">Item no.: 1000</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="productwrap">
-                            <div class="pr-img">
-                                <a href="product.html"><img src="images/crochet.jpg" alt="" class="img-responsive"></a>
-                                <div class="pricetag">
-                                    <div class="inner">$199</div>
-                                </div>
-                            </div>
-                            <span class="smalltitle"><a href="product.html">Nikon Camera</a></span>
-                            <span class="smalldesc">Item no.: 1000</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="productwrap">
-                            <div class="pr-img">
-                                <a href="product.html"><img src="images/crochet.jpg" alt="" class="img-responsive"></a>
-                                <div class="pricetag">
-                                    <div class="inner">$199</div>
-                                </div>
-                            </div>
-                            <span class="smalltitle"><a href="product.html">Black Shoes</a></span>
-                            <span class="smalldesc">Item no.: 1000</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="productwrap">
-                            <div class="pr-img">
-                                <a href="product.html"><img src="images/crochet.jpg" alt="" class="img-responsive"></a>
-                                <div class="pricetag">
-                                    <div class="inner">$199</div>
-                                </div>
-                            </div>
-                            <span class="smalltitle"><a href="product.html">Nikon Camera</a></span>
-                            <span class="smalldesc">Item no.: 1000</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="productwrap">
-                            <div class="pr-img">
-                                <a href="product.html"><img src="images/crochet.jpg" alt="" class="img-responsive"></a>
-                                <div class="pricetag">
-                                    <div class="inner">$199</div>
-                                </div>
-                            </div>
-                            <span class="smalltitle"><a href="product.html">Red T-Shirt</a></span>
-                            <span class="smalldesc">Item no.: 1000</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="productwrap">
-                            <div class="pr-img">
-                                <a href="product.html"><img src="images/crochet.jpg" alt="" class="img-responsive"></a>
-                                <div class="pricetag">
-                                    <div class="inner">$199</div>
-                                </div>
-                            </div>
-                            <span class="smalltitle"><a href="product.html">Nikon Camera</a></span>
-                            <span class="smalldesc">Item no.: 1000</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="productwrap">
-                            <div class="pr-img">
-                                <a href="product.html"><img src="images/crochet.jpg" alt="" class="img-responsive"></a>
-                                <div class="pricetag">
-                                    <div class="inner">$199</div>
-                                </div>
-                            </div>
-                            <span class="smalltitle"><a href="product.html">Black Shoes</a></span>
-                            <span class="smalldesc">Item no.: 1000</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="productwrap">
-                            <div class="pr-img">
-                                <a href="product.html"><img src="images/crochet.jpg" alt="" class="img-responsive"></a>
-                                <div class="pricetag">
-                                    <div class="inner">$199</div>
-                                </div>
-                            </div>
-                            <span class="smalltitle"><a href="product.html">Nikon Camera</a></span>
-                            <span class="smalldesc">Item no.: 1000</span>
-                        </div>
-                    </div>
+                <div class="row prdct" id="productContaainer">
+                    
                 </div>
                 <ul class="pagination shop-pag">
                     <li><a href="#/index.html"><i class="fa fa-caret-left"></i></a></li>
@@ -443,7 +334,66 @@
     <!--footer-->
     </div>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Add new products</h2>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">Product Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="pname" name="product" placeholder="Product name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Price</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="price" name="price" placeholder="Product price">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="country">Product details</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea name="details" id="pdetails" cols="30" rows="10" placeholder="Write something.."></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <!-- <label for="subject" id="pImg">Image</label> -->
+                            <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+                            <img id="output" width="200" />
+                        </div>
+                        <div class="col-75">
+                            <!-- <input type="file"> -->
+                            <input type="file"  accept="image/gif, image/jpeg, image/png" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <h3></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/product.js"></script>
 
 </body>
 
