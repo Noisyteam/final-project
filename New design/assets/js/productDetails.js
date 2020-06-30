@@ -8,8 +8,7 @@ var quantity = document.getElementById('quantity');
 var items =  JSON.parse(localStorage.getItem('cart')) || [];
 var item = localStorage.getItem('selectedItem');
 var cart;
-  
-console.log("rrrrr" + item);
+
 function getItem(){
     var cartItem = JSON.parse(localStorage.getItem('cart')) || [];
     cart = new Cart(cartItem);
@@ -23,7 +22,6 @@ function getItem(){
 
         }
     }
-    console.log(items);
 }
 
 //TODO: Add the selected item and quantity to the cart
