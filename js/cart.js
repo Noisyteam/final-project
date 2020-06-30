@@ -89,7 +89,7 @@ function showCart() {
     tr.appendChild(tTD);
    
   }
-  document.getElementById('totalOfTotals').textContent = '$' + totalPrice;
+  document.getElementById('Total').innerHTML= '$' + totalPrice;
   totalPrice=0;
 
 }
