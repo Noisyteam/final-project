@@ -171,7 +171,7 @@
         
 
         <div>
-            <table class="table chart">
+            <table class="table chart" id="cart">
                 <thead >
                     <tr>
                         <th>Product</th>
@@ -183,14 +183,31 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
+                    <!-- <tr>
+                        <td><img src="images/1.jpg"></td>
+                        <td>Crochet Bag</td>
+                        <td>120$</td>
                         <td>2</td>
+                        <td><Button type="submit" id='remove'>Remove</Button></td>
+                        <td>240$</td>
+                      </tr>
+                      <tr>
+                        <td><img src="images/3.jpg"></td>
+                        <td>Soaps</td>
+                        <td>100$</td>
                         <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                    </tr>
+                        <td><Button type="submit" id='remove'>Remove</Button></td>
+                        <td>300$</td>
+                      </tr>
+                      <tr>
+                        <td><img src="images/bodybg.png"></td>
+                        <td>Pillow</td>
+                        <td>250$</td>
+                        <td>2</td>
+                        <td><Button type="submit" id='remove'>Remove</Button></td>
+                        <td>500$</td>
+                      </tr> -->
+                    </tbody>
 
                 </tbody>
 
@@ -201,10 +218,10 @@
                 </div>
                 <div class="col-md-3">
                     <div class="subtotal-wrap">
-                        <div class="subtotal">
-                            <p>Sub Total : $26.00</p>
-                        </div>
-                        <div class="total">Total : <span class="bigprice">$255.00</span></div>
+                        <!-- <div class="subtotal">
+                                                    <p>Sub Total : <span id="subTotal">$26.00</span></p>
+                                                </div> -->
+                        <div class="total" >Total : <span class="bigprice" id="Total"> $255.00</span></div>
                         <a href="#" class="btn btn-default btn-red btn-sm">Checkout</a>
                         <div class="clearfix"></div>
                         <a href="#" class="btn btn-default btn-yellow">Continue Shopping</a>
@@ -281,7 +298,9 @@
 			</div>
 		</div>
 	</div><!--footer-->
-	</div>
+    </div>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
 
 </html>

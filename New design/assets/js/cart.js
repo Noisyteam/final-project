@@ -62,6 +62,7 @@ function showCart() {
     button.innerText = 'Remove';
     // xTD.innerHTML = '<Button type="button" id="remove">Remove</Button>';
     button.classList.add('remover');
+    button.className = 'btn btn-default btn-red btn-sm';
     button.id = i;
     xTD.appendChild(button);
 
@@ -89,7 +90,7 @@ function showCart() {
     tr.appendChild(tTD);
    
   }
-  document.getElementById('totalOfTotals').textContent = '$' + totalPrice;
+  document.getElementById('Total').innerHTML= '$' + totalPrice;
   totalPrice=0;
 
 }
