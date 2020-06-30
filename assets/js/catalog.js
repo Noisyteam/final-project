@@ -42,7 +42,7 @@ function populateForm() {
 
   for (var i in Product.allProducts) {
     if(i < 20) {
-      console.log(Product.allProducts[i]);
+     // console.log(Product.allProducts[i]);
       // var optionElement = document.createElement('option');
       // optionElement.textContent = Product.allProducts[i].name;
       // optionElement.setAttribute('value', Product.allProducts[i].name);
@@ -68,7 +68,7 @@ function populateForm() {
 
   for (var i in Product.allProducts) {
     if(i < 6) {
-      console.log(Product.allProducts[i]);
+      //console.log(Product.allProducts[i]);
       // var optionElement = document.createElement('option');
       // optionElement.textContent = Product.allProducts[i].name;
       // optionElement.setAttribute('value', Product.allProducts[i].name);
@@ -178,4 +178,4 @@ function addNewEmail(event) {
    new Email(newEmail);
  }
  //Event Listener
-emailForm.addEventListener('submit', addNewEmail);
+//emailForm.addEventListener('submit', addNewEmail);
