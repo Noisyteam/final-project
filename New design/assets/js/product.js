@@ -64,6 +64,7 @@ function addNewProduct(event) {
   var pname = document.getElementById("pname").value;
   var price = document.getElementById("price").value;
   var pdetails = document.getElementById("pdetails").value;
+  var pImg = document.getElementById("pImg").src;
 
   var counter = Product.allProducts.length + 1;
 
@@ -73,7 +74,8 @@ function addNewProduct(event) {
   div.setAttribute("id", "newProduct" + counter);
 
   div.innerHTML =
-    '<a href="productDetail.html"><img src="https://gallery.autodesk.com/assets/default%20tile%20thumbnail.jpg" alt="Denim Jeans" style="width:100%">' +
+    '<a href="productDetail.html">' +
+    '<img src="pImg" style="width:100%">' +
     "<h2>" +
     pname +
     "</h2>" +
@@ -84,7 +86,6 @@ function addNewProduct(event) {
   productContaainer.appendChild(div);
 
   modal.style.display = "none";
-
 }
 
 // TODO: Add the selected item and quantity to the cart
@@ -134,7 +135,6 @@ btn.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
-  
 };
 
 // When the user clicks anywhere outside of the modal, close it
