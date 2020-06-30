@@ -61,8 +61,8 @@ function showCart() {
     var button = document.createElement('button');
     button.innerText = 'Remove';
     // xTD.innerHTML = '<Button type="button" id="remove">Remove</Button>';
-    button.classList.add('remover');
-    button.className = 'btn btn-default btn-red btn-sm';
+    //button.classList.add('remover');
+    button.className=' remover btn btn-default btn-red btn-sm';
     button.id = i;
     xTD.appendChild(button);
 
