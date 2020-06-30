@@ -26,20 +26,25 @@ function populateForm() {
     // selectElement.appendChild(optionElement);
 
     var div = document.createElement("div");
-    div.setAttribute("class", "card");
+    // div.setAttribute("class", "card");
     div.setAttribute("id", "newProduct" + Product.allProducts[i].id);
 
     div.innerHTML =
-      '<a href="productDetail.html"><img src="' +
-      Product.allProducts[i].filePath +
-      '" alt="Denim Jeans" style="width:100%">' +
-      "<h2>" +
-      Product.allProducts[i].name +
-      "</h2>" +
-      '<p class="price">' +
-      Product.allProducts[i].price +
-      "</p></a>" +
-      '<button onClick="handleSubmit(this);">Add to Cart</button>';
+      '<div class="col-md-4">' +
+      '<div class="productwrap">' +
+      '<div class="pr-img">' +
+      '<div class="hot"></div>' +
+      '<a onclick = "saveIDToLocalStorage('+Product.allProducts[i].id+')" href="productdetails.html"><img src="' + Product.allProducts[i].filePath + '" alt="" class="img-responsive"></a>' +
+      '<div class="pricetag on-sale">' +
+      '<div class="inner on-sale"><span class="onsale"><span' +
+      'class="oldprice"></span>$' + Product.allProducts[i].price + '</span></div>' +
+      '</div>' +
+      '</div>' +
+      '<span class="smalltitle"><a onclick = "saveIDToLocalStorage('+Product.allProducts[i].id+')" href="productdetails.html">' + Product.allProducts[i].name + '</a></span>' +
+      '<span class="smalldesc">Item no.: 1000</span>' +
+      '</div>' +
+      '</div>';
+
     productContaainer.appendChild(div);
   }
 }
@@ -73,14 +78,20 @@ function addNewProduct(event) {
   div.setAttribute("id", "newProduct" + counter);
 
   div.innerHTML =
-    '<a href="productDetail.html"><img src="https://gallery.autodesk.com/assets/default%20tile%20thumbnail.jpg" alt="Denim Jeans" style="width:100%">' +
-    "<h2>" +
-    pname +
-    "</h2>" +
-    '<p class="price">' +
-    price +
-    "</p></a>" +
-    '<button onClick="handleSubmit(this);">Add to Cart</button>';
+  '<div class="col-md-4">' +
+  '<div class="productwrap">' +
+  '<div class="pr-img">' +
+  '<div class="hot"></div>' +
+  '<a onclick="saveIDToLocalStorage('+Product.allProducts[i].id+')" href="productdetails.html"><img src="https://gallery.autodesk.com/assets/default%20tile%20thumbnail.jpg" alt="" class="img-responsive"></a>' +
+  '<div class="pricetag on-sale">' +
+  '<div class="inner on-sale"><span class="onsale"><span' +
+  'class="oldprice"></span>$' + pname + '</span></div>' +
+  '</div>' +
+  '</div>' +
+  '<span class="smalltitle"><a href="productdetails.html">' + price + '</a></span>' +
+  '<span class="smalldesc">Item no.: 1000</span>' +
+  '</div>' +
+  '</div>';
   productContaainer.appendChild(div);
 
   modal.style.display = "none";
@@ -134,7 +145,7 @@ btn.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
-  
+
 };
 
 // When the user clicks anywhere outside of the modal, close it
@@ -152,4 +163,9 @@ productForm.addEventListener("submit", addNewProduct);
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
+
+function saveIDToLocalStorage(id) {
+  localStorage.setItem('selectedItem', JSON.stringify(id));
+}
+
 populateForm();

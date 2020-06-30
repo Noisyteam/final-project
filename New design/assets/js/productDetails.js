@@ -8,6 +8,8 @@ var quantity = document.getElementById('quantity');
 var item = localStorage.getItem('selectedItem');
 var cart = new Cart([]);
 
+console.log(item);
+
 function getItem(){
     for (var i = 0; i < Product.allProducts.length; i++) {
         if (Product.allProducts[i].id == item) {
@@ -18,7 +20,6 @@ function getItem(){
 
         }
     }
-    console.log(item);
 }
 
 // TODO: Add the selected item and quantity to the cart
