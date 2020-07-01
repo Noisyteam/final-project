@@ -1,7 +1,6 @@
 /* global Product, Cart */
 
 'use strict';
-var emailForm = document.getElementById('email_form');
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
 
@@ -12,14 +11,6 @@ var productSection = document.getElementById('productSection');
 var featurerProductSection = document.getElementById('featurerProductSection');
 
 
-
-//Email Subscription
-var Email = function(email) {
-  this.email = email
-  Email.allEmails.push(this);
-  localStorage.setItem('EmailList', JSON.stringify(Email.allEmails));
- };
-Email.allEmails = [];
 
 
 // var ul = document.createElement('ul');
@@ -148,7 +139,9 @@ function addSelectedItemToCart(event) {
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
-  itemCount.innerHTML = cart.items.length;
+  // itemCount.innerHTML = cart.items.length;
+  cart.updateCounter();
+
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
@@ -170,12 +163,9 @@ function updateCartPreview() {
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
+// cart.updateCounter();
+itemCart.innerHTML = localStorage.getItem('total');
+
+
 populateForm();
 //Event Handler
-function addNewEmail(event) {
-  var newEmail = event.target.email.value;
-  event.preventDefault();
-   new Email(newEmail);
- }
- //Event Listener
-//emailForm.addEventListener('submit', addNewEmail);

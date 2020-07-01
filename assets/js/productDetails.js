@@ -39,8 +39,13 @@ function addToCart(event) {
     cart.addItem(item, qyt, img, price);
 
     cart.saveToLocalStorage();
-  
+    cart.updateCounter();
+
   }
 
   productDetailsForm.addEventListener('submit', addToCart);
+  
+// cart.updateCounter();
+itemCart.innerHTML = localStorage.getItem('total');
+
 getItem();

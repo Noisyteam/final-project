@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 main-logo">
-					<a href="index.html"><img src="images/logo.png" alt="logo" class="logo img-responsive" /></a>
+                    <a href="index.html"><img src="images/logo.png" alt="logo" class="logo img-responsive" /></a>
                 </div>
                 <div class="col-md-8">
                     <div class="pushright">
@@ -92,66 +92,16 @@
                         </div>
                     </div>
                     <div class="col-md-2 machart">
-                        <button id="popcart" class="btn btn-default btn-chart btn-sm "><span
-                                class="mychart">Cart</span>|<span class="allprice">$0.00</span></button>
-                        <div class="popcart">
-                            <table class="table table-condensed popcart-inner">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <a href="product.html"><img src="images/dummy-1.png" alt=""
-                                                    class="img-responsive" /></a>
-                                        </td>
-                                        <td><a href="product.html">Casio Exilim Zoom</a><br /><span>Color: green</span>
-                                        </td>
-                                        <td>1X</td>
-                                        <td>$138.80</td>
-                                        <td><a href="#"><i class="fa fa-times-circle fa-2x"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="product.html"><img src="images/dummy-1.png" alt=""
-                                                    class="img-responsive" /></a>
-                                        </td>
-                                        <td><a href="product.html">Casio Exilim Zoom</a><br /><span>Color: green</span>
-                                        </td>
-                                        <td>1X</td>
-                                        <td>$138.80</td>
-                                        <td><a href="#"><i class="fa fa-times-circle fa-2x"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="product.html"><img src="images/dummy-1.png" alt=""
-                                                    class="img-responsive" /></a>
-                                        </td>
-                                        <td><a href="product.html">Casio Exilim Zoom</a><br /><span>Color: green</span>
-                                        </td>
-                                        <td>1X</td>
-                                        <td>$138.80</td>
-                                        <td><a href="#"><i class="fa fa-times-circle fa-2x"></i></a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <span class="sub-tot">Sub-Total : <span>$277.60</span> | <span>Vat (17.5%)</span> : $36.00
-                            </span>
-                            <br />
-                            <div class="btn-popcart">
-                                <a href="checkout.html" class="btn btn-default btn-red btn-sm">Checkout</a>
-                                <a href="cart.html" class="btn btn-default btn-red btn-sm">More</a>
-                            </div>
-                            <div class="popcart-tot">
-                                <p>
-                                    Total<br />
-                                    <span>$313.60</span>
-                                </p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
+                        <a href="cart.html" id="popcart" class="btn btn-default btn-chart btn-sm ">
+                            <span class="mychart">Cart</span>|<span id="allprice" class="allprice">$0.00</span></button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--end main-nav -->
+
     <!--end main-nav -->
     <div class="container">
         <div class="row">
@@ -168,11 +118,11 @@
                 </div>
             </div>
         </div>
-        
+
 
         <div>
             <table class="table chart" id="cart">
-                <thead >
+                <thead>
                     <tr>
                         <th>Product</th>
                         <th></th>
@@ -207,27 +157,27 @@
                         <td><Button type="submit" id='remove'>Remove</Button></td>
                         <td>500$</td>
                       </tr> -->
-                    </tbody>
+                </tbody>
 
                 </tbody>
 
             </table>
             <div class="row">
                 <div class="col-md-9">
-                    
+
                 </div>
                 <div class="col-md-3">
                     <div class="subtotal-wrap">
                         <!-- <div class="subtotal">
                                                     <p>Sub Total : <span id="subTotal">$26.00</span></p>
                                                 </div> -->
-                        <div class="total" >Total : <span class="bigprice" id="Total"> $255.00</span></div>
+                        <div class="total">Total : <span class="bigprice" id="Total"> $255.00</span></div>
                         <a href="#" class="btn btn-default btn-red btn-sm">Checkout</a>
                         <div class="clearfix"></div>
                         <a href="#" class="btn btn-default btn-yellow">Continue Shopping</a>
                     </div>
                     <div class="clearfix"></div>
-    
+
 
                 </div>
             </div>
@@ -237,67 +187,84 @@
 
 
 
-    <div class="f-widget"><!--footer Widget-->
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4"><!--footer newsletter widget-->
-					<div class="title-widget-bg">
-						<div class="title-widget">Newsletter Signup</div>
-					</div>
-					<div class="newsletter">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-						<form role="form">
-							<div class="form-group">
-								<label>Your Email address</label>
-								<input type="email" class="form-control newstler-input" id="exampleInputEmail1" placeholder="Enter email">
-								<button class="btn btn-default btn-red btn-sm">Sign Up</button>
-							</div>
-						</form>
-					</div>
-				</div><!--footer newsletter widget-->
-				<div class="col-md-4"><!--footer twitter widget-->
-				</div><!--footer twitter widget-->
-				<div class="col-md-4"><!--footer contact widget-->
-					<div class="title-widget-bg">
-						<div class="title-widget-cursive">Shopping</div>
-					</div>
-					<ul class="contact-widget">
-						<li class="fphone">+387 123 456, +387 123 456 <br /> +387 123 456</li>
-						<li class="fmobile">+387-123-456-1<br />+387-123-456-2</li>
-						<li class="fmail lastone">your@email.com<br />customer.care@mail.com</li>
-					</ul>
-				</div><!--footer contact widget-->
-			</div>
-			<div class="spacer"></div>
-		</div>
-	</div><!--footer Widget-->
-	<div class="footer"><!--footer-->
-		<div class="container">
-			<div class="row">
-				<div class="col-md-9">
-					<ul class="footermenu"><!--footer nav-->
-						<li><a href="index.html">Home</a></li>
-						<li><a href="cart.html">My Cart</a></li>
-						<li><a href="contact.html">Contact us</a></li>
-					</ul><!--footer nav-->
-					<div class="f-credit">&copy;All rights reserved by <a href="#">Handy</a></div>
-				</div>
-				<div class="col-md-3"><!--footer Share-->
-					<div class="followon">Follow us on</div>
-					<div class="fsoc">
-						<a href="http://twitter.com/minimalthemes" class="ftwitter">twitter</a>
-						<a href="http://www.facebook.com/pages/Minimal-Themes/264056723661265" class="ffacebook">facebook</a>
-						<a href="#" class="fflickr">flickr</a>
-						<a href="#" class="ffeed">feed</a>
-						<div class="clearfix"></div>
-					</div>
-					<div class="clearfix"></div>
-				</div><!--footer Share-->
-			</div>
-		</div>
-	</div><!--footer-->
+    <div class="f-widget">
+        <!--footer Widget-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!--footer newsletter widget-->
+                    <div class="title-widget-bg">
+                        <div class="title-widget">Newsletter Signup</div>
+                    </div>
+                    <div class="newsletter">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua.
+                        </p>
+                        <form id="email_form" role="form">
+                            <div class="form-group">
+                                <label>Your Email address</label>
+                                <input type="email" class="form-control newstler-input" id="exampleInputEmail1"
+                                    placeholder="Enter email">
+                                <button class="btn btn-default btn-red btn-sm">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--footer newsletter widget-->
+                <div class="col-md-4">
+                    <!--footer twitter widget-->
+                </div>
+                <!--footer twitter widget-->
+                <div class="col-md-4">
+                    <!--footer contact widget-->
+                    <div class="title-widget-bg">
+                        <div class="title-widget-cursive">Shopping</div>
+                    </div>
+                    <ul class="contact-widget">
+                        <li class="fphone">+387 123 456, +387 123 456 <br /> +387 123 456</li>
+                        <li class="fmobile">+387-123-456-1<br />+387-123-456-2</li>
+                        <li class="fmail lastone">info@handy.com<br />customer.care@handy.com</li>
+                    </ul>
+                </div>
+                <!--footer contact widget-->
+            </div>
+            <div class="spacer"></div>
+        </div>
+    </div>
+    <!--footer Widget-->
+    <div class="footer">
+        <!--footer-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="footermenu">
+                        <!--footer nav-->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cart.html">My Cart</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                    <!--footer nav-->
+                    <div class="f-credit">&copy;All rights reserved by <a href="#">Handy</a></div>
+                </div>
+                <div class="col-md-3">
+                    <!--footer Share-->
+                    <div class="followon">Follow us on</div>
+                    <div class="fsoc">
+                        <a href="http://twitter.com/minimalthemes" class="ftwitter">twitter</a>
+                        <a href="http://www.facebook.com/pages/Minimal-Themes/264056723661265"
+                            class="ffacebook">facebook</a>
+                        <a href="#" class="fflickr">flickr</a>
+                        <a href="#" class="ffeed">feed</a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!--footer Share-->
+            </div>
+        </div>
+    </div>
+    <!--footer-->
     </div>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/cart.js"></script>

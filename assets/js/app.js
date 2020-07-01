@@ -1,28 +1,29 @@
 'use strict';
 
+var itemCart = document.getElementById('allprice');
 
 // Cart constructor.
 var Cart = function (items) {
   // this.items is an array of CartItem instances.
   this.items = items;
 };
-var x=
-Cart.prototype.addItem = function (product, quantity, img, price) {
-  // TODO: Fill in this instance method to create a new CartItem and add it to this.items
-  x=new CartItem(product, quantity, img, price);
-  this.items.push(x);  
- // console.log(this.items);
-};
+var x =
+  Cart.prototype.addItem = function (product, quantity, img, price) {
+    // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+    x = new CartItem(product, quantity, img, price);
+    this.items.push(x);
+    // console.log(this.items);
+  };
 
 Cart.prototype.saveToLocalStorage = function () {
 
- 
-//   console.log(localStorage.getItem('cart'));
-//   var stored=localStorage.getItem('cart')||[];
-//  // stored.push(this.items);
-//   console.log('item',this.items);
- localStorage.setItem('cart', JSON.stringify(this.items)); 
- // console.log(stored);
+
+  //   console.log(localStorage.getItem('cart'));
+  //   var stored=localStorage.getItem('cart')||[];
+  //  // stored.push(this.items);
+  //   console.log('item',this.items);
+  localStorage.setItem('cart', JSON.stringify(this.items));
+  // console.log(stored);
 };
 
 Cart.prototype.removeItem = function (item) {
@@ -102,10 +103,46 @@ function generateCatalog() {
 }
 
 
+Cart.prototype.updateCounter = function() {
+  var total = 0;
+  // var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  // cart = new Cart(cartItems);
+  for (var i in this.items) {
+    total += parseInt(this.items[i].price);
+  }
+  console.log(parseInt(total));
+
+  localStorage.setItem('total', "$" + total);
+
+  itemCart.innerHTML = total;
+};
+
 
 // Initialize the app by creating the big list of products with images and names
 generateSlider();
 generateCatalog();
 generateReview();
+itemCart.innerHTML = localStorage.getItem('total');
 //console.log(Slider.allSliders);
 //console.log(Product.allProducts);
+
+
+
+var emailForm = document.getElementById('email_form');
+
+//Email Subscription
+var Email = function(email) {
+  this.email = email
+  Email.allEmails.push(this);
+  localStorage.setItem('EmailList', JSON.stringify(Email.allEmails));
+ };
+Email.allEmails = [];
+
+
+function addNewEmail(event) {
+  var newEmail = event.target.email.value;
+  event.preventDefault();
+  new Email(newEmail);
+}
+//Event Listener
+emailForm.addEventListener('submit', addNewEmail);

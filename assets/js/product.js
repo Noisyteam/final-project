@@ -195,4 +195,7 @@ function saveIDToLocalStorage(id) {
   localStorage.setItem("selectedItem", JSON.stringify(id));
 }
 
+// cart.updateCounter();
+itemCart.innerHTML = localStorage.getItem('total');
+
 populateForm();

@@ -109,4 +109,7 @@ function removeItemFromCart(event) {
 }
 
 // This will initialize the page and draw the cart on screen
+// cart.updateCounter();
+itemCart.innerHTML = localStorage.getItem('total');
+
 renderCart();
