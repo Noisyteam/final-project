@@ -99,7 +99,8 @@ html,body {
 }
 .curve{
 	background: url('images/home-active.png')no-repeat;
-	width:70px;
+	width:100%;
+	background-size: 100%;
 	height:10px;
 }
 .menu-large {

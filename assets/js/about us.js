@@ -79,7 +79,7 @@ function contact() {
     card.appendChild(img);
 
     var container = document.createElement("div");
-    container.className = "container";
+    container.className = "container about-us";
     card.appendChild(container);
 
     var h2 = document.createElement("h2");
